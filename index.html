@@ -95,7 +95,7 @@
 </header>
 
 <main>
-  <p class="updated">Last updated August 13, 2026</p>
+  <p class="updated">Last updated August 15, 2026</p>
 
   <div class="intro">
     <p style="margin:0">
@@ -180,6 +180,22 @@
       the source. Supabase is the only third party that processes your data on the app's
       behalf.
     </p>
+  </section>
+
+  <section>
+    <h2>How long information is kept</h2>
+    <ul>
+      <li><strong>Group chat messages are deleted automatically</strong> three days after the
+        shift's date — whether or not the shift went ahead, and whether or not anyone asks. A
+        scheduled job in the database does this; it is not something the app has to remember to
+        run, and nobody can turn it off for a particular thread.</li>
+      <li><strong>Everything else is kept for as long as your account exists.</strong> Your
+        profile, participation records, photos you uploaded, and your notification history stay
+        until you delete your account, which you can do at any time — see below.</li>
+      <li><strong>Links to photos expire, the photos do not.</strong> Every image is served
+        through a private link that stops working after an hour; the app generates a fresh one
+        each time you view the photo.</li>
+    </ul>
   </section>
 
   <section>
