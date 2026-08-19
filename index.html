@@ -95,7 +95,7 @@
 </header>
 
 <main>
-  <p class="updated">Last updated August 15, 2026</p>
+  <p class="updated">Last updated August 19, 2026</p>
 
   <div class="intro">
     <p style="margin:0">
@@ -111,9 +111,8 @@
     <ul>
       <li><strong>Account information.</strong> Email address and password, handled by our
         backend provider (Supabase) — the app itself never stores your password.</li>
-      <li><strong>Profile information.</strong> Name, age (used only to determine whether the
-        under-18 display rule below applies), and optionally a phone number and a profile
-        photo.</li>
+      <li><strong>Profile information.</strong> Name, age (used only to confirm you are at
+        least 13), and optionally a phone number and a profile photo.</li>
       <li><strong>Home address.</strong> Optional, and off by default. If you add one, it is
         used to sort opportunities by distance and, only if you separately turn on "share my
         address," to let a coordinator of your organization see the street address itself
@@ -123,8 +122,8 @@
         delivery) or a profile picture. Photos are stored in a private cloud bucket; every
         organization photo is tied to the shift it documents.</li>
       <li><strong>Participation records.</strong> Which shifts you sign up for, cancel, or
-        complete; supply items you claim or purchase; messages you send in a shift's group
-        chat; and notifications about shifts you are on.</li>
+        complete; supply items you claim or purchase; and notifications about shifts you are
+        on.</li>
       <li><strong>Device calendar.</strong> If you choose to, the app can add a shift to your
         phone's own calendar. That entry lives on your device — the app only stores the
         calendar entry's ID, so it can remove the same entry later if you cancel.</li>
@@ -152,18 +151,18 @@
     <p>
       The app is organized around volunteer organizations. If you join one, the following is
       visible to other members of that <strong>same</strong> organization — this is how a
-      coordinator finds people to staff a shift, and how a group chat works:
+      coordinator finds people to staff a shift:
     </p>
     <ul>
       <li>Your name, phone number (if you added one), and profile photo.</li>
-      <li>Which shifts you have signed up for, and messages you send in that shift's chat.</li>
+      <li>Which shifts you have signed up for.</li>
       <li>Your approximate distance from a site, only if a coordinator looks up "who's nearby"
         — never your street address unless you separately turned on address sharing.</li>
     </ul>
     <p>
-      Volunteers under 18 are shown to everyone else by first name only, everywhere a name
-      would otherwise appear — rosters, leaderboards, chat. This is the one age-based rule in
-      the app; participation itself is identical regardless of age.
+      Every volunteer is shown by the name they entered, whatever their age, everywhere a name
+      appears to fellow volunteers — such as the roster for a shift. Names are only ever
+      visible to people in the same organization as you.
     </p>
     <p>
       Members of a <strong>different</strong> organization on the same app never see your
@@ -185,11 +184,7 @@
   <section>
     <h2>How long information is kept</h2>
     <ul>
-      <li><strong>Group chat messages are deleted automatically</strong> three days after the
-        shift's date — whether or not the shift went ahead, and whether or not anyone asks. A
-        scheduled job in the database does this; it is not something the app has to remember to
-        run, and nobody can turn it off for a particular thread.</li>
-      <li><strong>Everything else is kept for as long as your account exists.</strong> Your
+      <li><strong>Everything is kept for as long as your account exists.</strong> Your
         profile, participation records, photos you uploaded, and your notification history stay
         until you delete your account, which you can do at any time — see below.</li>
       <li><strong>Links to photos expire, the photos do not.</strong> Every image is served
@@ -203,7 +198,7 @@
     <p>
       You can permanently delete your account from inside the app at any time — Profile →
       Danger zone → Delete my account. This immediately and permanently removes your profile,
-      home address, notifications, chat messages, saved photo, and any upcoming (not yet
+      home address, notifications, saved photo, and any upcoming (not yet
       completed) shift sign-ups. There is no recovery period and no way to undo it.
     </p>
     <p>
@@ -219,8 +214,9 @@
     <h2>Children</h2>
     <p>
       The app requires every volunteer to be at least 13 years old and does not knowingly
-      collect information from anyone younger. Volunteers under 18 are shown to others by first
-      name only, as described above.
+      collect information from anyone younger. Volunteers under 18 take part on exactly the
+      same terms as everyone else, and are shown by name to the other people in their
+      organization in the same way, as described above.
     </p>
   </section>
 
