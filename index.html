@@ -95,152 +95,426 @@
 </header>
 
 <main>
-  <p class="updated">Last updated August 28, 2026</p>
+  <p class="updated">Last updated September 3, 2026</p>
 
   <div class="intro">
     <p style="margin:0">
-      Community Meals ("the app") connects volunteers with food-relief organizations that cook
-      and deliver meals. This policy explains what information the app collects, why, who can
-      see it, and how to have it deleted. It covers the app itself; it does not speak on behalf
-      of any individual organization using it.
+      Community Meals (&ldquo;the app&rdquo;) connects volunteers with food-relief organizations that
+      cook and deliver meals. This policy explains what information the app collects, why, who can
+      see it, how to turn each piece of it off, and how to have it deleted. Plain answers, no
+      defined terms &mdash; if something here is vague, that is a bug in the writing and we want to
+      hear about it.
     </p>
   </div>
 
   <section>
-    <h2>Information the app collects</h2>
+    <h2>Who is responsible for your information</h2>
+    <p>The people who make the app are. Every account here is created by the volunteer it belongs
+      to, and every field in it is one you typed or chose yourself &mdash; no coordinator can create
+      a record about you, add you to an organization, or edit your details. So the responsibility is
+      ours, not your organization&rsquo;s, and every request in this policy comes to us at the address
+      at the bottom of this page. You never have to work out which of two parties to ask.</p>
+    <p>One honest limit. Once a coordinator has legitimately seen something &mdash; your name and
+      phone number on a roster, say &mdash; what they then do outside the app is between you and
+      them. If they write your number down or text you, the app is no longer involved and cannot
+      take that back. Your organization may also have its own volunteer paperwork and its own
+      privacy practices, which this policy does not cover.</p>
+  </section>
+
+  <section>
+    <h2>How the app collects information</h2>
+    <p>Only one way: <strong>you give it to us</strong>, by typing it or choosing it. Three things
+      follow from that, and each is a promise about what is actually in the app, not a statement of
+      intent:</p>
     <ul>
-      <li><strong>Account information.</strong> Email address and password, handled by our
-        backend provider (Supabase) — the app itself never stores your password.</li>
-      <li><strong>Profile information.</strong> Name, age (used only to confirm you are at
-        least 13), and optionally a phone number and a profile photo.</li>
-      <li><strong>Home address.</strong> Optional, and off by default. If you add one, it is
-        used to sort opportunities by distance and, only if you separately turn on "share my
-        address," to let a coordinator of your organization see the street address itself
-        rather than just a distance. Your address is never shown to other volunteers, and never
-        to any organization you have not joined.</li>
-      <li><strong>Photos you upload.</strong> Documentation of a shift (cooking, packing,
-        delivery) or a profile picture. Photos are stored in a private cloud bucket; every
-        organization photo is tied to the shift it documents.</li>
-      <li><strong>Reports and blocks.</strong> If you report a photo, we store which photo, the
-        reason you picked, any note you add, and that it was you — coordinators of that
-        organization need to know who raised it. If you block someone, we store that too; it is
-        visible only to you, never to them and never to a coordinator.</li>
-      <li><strong>Participation records.</strong> Which shifts you sign up for, cancel, or
-        complete; supply items or dishes you claim, and any note you add when you do (for
-        example, how many people you are cooking for); which of those you have been assigned to
-        drive; and notifications about shifts you are on.</li>
-      <li><strong>Device calendar.</strong> If you choose to, the app can add a shift to your
-        phone's own calendar. That entry lives on your device — the app only stores the
-        calendar entry's ID, so it can remove the same entry later if you cancel.</li>
-      <li><strong>Device notifications.</strong> Off by default. If you turn it on, the app can
-        show a notification on your device when something in your feed changes (a delivery is
-        confirmed, a shift you're on changes). This uses your device's own notification system,
-        not a third-party push service, and nothing is sent anywhere until you turn it on.</li>
+      <li><strong>Nothing is gathered in the background.</strong> No usage tracking, no analytics
+        events, no crash or performance reporting, no device fingerprinting. The app contains no
+        analytics or advertising software of any kind, so there is nothing running that could
+        quietly observe how you use it.</li>
+      <li><strong>Nothing about you arrives from anyone else.</strong> No data brokers, no social
+        networks, no purchased lists, no background-check services. Joining an organization does not
+        import a record about you from anywhere &mdash; it creates a membership and nothing more.</li>
+      <li><strong>Things that never leave your phone are not collected at all.</strong> Filtering
+        runs by distance happens on your own device, and a shift added to your calendar lives in
+        your calendar. Those are described below for completeness, but they are not sent to us.</li>
     </ul>
   </section>
 
   <section>
+    <h2>Information the app collects</h2>
+    <ul>
+      <li><strong>Account information.</strong> Email address and password, handled by our backend
+        provider (Supabase) &mdash; the app itself never stores your password.</li>
+      <li><strong>Profile information.</strong> Your first and last name, a phone number, and your
+        age (kept as a birth year, and used only to confirm you are at least 13). A profile photo is
+        optional. <strong>A phone number is required</strong> &mdash; a coordinator staffing a run,
+        or a driver coming to collect a dish you cooked, has to be able to reach you, and the app
+        offers them a call or text link rather than showing them a way around it.</li>
+      <li><strong>A parent or guardian&rsquo;s details, for volunteers under 18.</strong> Their name,
+        email address and phone number, given by the guardian themselves during the young
+        volunteer&rsquo;s setup, together with which of the five items they agreed to. It is used only
+        to record and confirm that consent and to contact them about it, and for nothing else. It is
+        kept for as long as the volunteer&rsquo;s account, and is deleted when they turn 18 or when the
+        account is deleted.</li>
+      <li><strong>Home address.</strong> Optional, and never shared by default. If you add one, the
+        app also stores its map coordinates so distances can be worked out. It is used to sort and
+        filter opportunities by distance on your own device. Two separate, individually optional
+        settings can show it to another person; both are off unless you turn them on, and they are
+        described under &ldquo;Your home address&rdquo; below.</li>
+      <li><strong>Photos you upload.</strong> Documentation of a shift (cooking, packing, delivery)
+        or a profile picture. Photos are stored in a private cloud bucket; every organization photo
+        is tied to the shift it documents. Each photo is resized and re-encoded on your device
+        before it is uploaded, and the app never reads or stores location information from a photo
+        file.</li>
+      <li><strong>Reports and blocks.</strong> If you report a photo, we store which photo, the
+        reason you picked, any note you add, and that it was you &mdash; coordinators of that
+        organization need to know who raised it. If you block someone, we store that too; it is
+        visible only to you, never to them and never to a coordinator.</li>
+      <li><strong>Participation records.</strong> Which shifts you sign up for, cancel, or complete,
+        and any note you add about your vehicle; supply items and dishes you claim, whether you have
+        bought a supply item, and any note you add when you claim one (for example, how many people
+        you are cooking for); if you join someone else&rsquo;s dish to cook it together, that you
+        joined it and when; which of those a coordinator has assigned you to drive; whether you have
+        signalled interest in a role that is currently full; whether you have pledged to cover a run
+        yourself if nobody else signs up, and any note with that pledge; and notifications about
+        shifts you are on.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What the app uses it for</h2>
+    <p>Every field above exists for one of these purposes, and is used for nothing else:</p>
+    <ul>
+      <li>Signing you in and keeping your account yours.</li>
+      <li>Staffing and running shifts &mdash; showing a coordinator who has claimed what, and
+        letting the people on a run recognise and reach each other.</li>
+      <li>Showing you opportunities near you, and helping a coordinator see which volunteers are
+        close to a site.</li>
+      <li>Recording what a run cooked and delivered, and your own volunteer hours.</li>
+      <li>Keeping the app safe &mdash; handling reports of photos, and honouring the people you
+        block.</li>
+      <li>Telling you when something about a shift you are on changes.</li>
+    </ul>
+    <p>If we ever wanted to use something for a new purpose that is not on this list, we would ask
+      you first.</p>
+  </section>
+
+  <section class="not-do">
     <h2>What the app does not do</h2>
-    <div class="not-do">
-      <ul>
-        <li>No advertising and no ad tracking.</li>
-        <li>No analytics or crash-reporting SDKs are built into the app.</li>
-        <li>No data is sold, ever.</li>
-        <li>Every image URL is a private, time-limited link — nothing is publicly hosted.</li>
-      </ul>
-    </div>
+    <ul>
+      <li><strong>You are not tracked.</strong> Nothing about you is combined with data from other
+        companies&rsquo; apps or websites, and nothing is shared with a data broker. That is
+        Apple&rsquo;s definition of tracking, and the app does none of it &mdash; which is why it
+        never asks for permission to track you.</li>
+      <li>No advertising of any kind, and no advertising identifier is collected.</li>
+      <li>No analytics or crash-reporting software is built into the app.</li>
+      <li>No data is sold, and none is shared for targeted advertising, ever.</li>
+      <li>No data is used to train artificial-intelligence or machine-learning models, by us or by
+        anyone else, and nothing is sent to an AI service.</li>
+      <li>No live location is read. The app never asks your phone where it is; the one location
+        permission it requests exists only to turn an address <strong>you typed</strong> into
+        coordinates.</li>
+      <li>Your contacts, address book, and other apps are never looked at.</li>
+      <li>Every image URL is a private, time-limited link &mdash; nothing is publicly hosted.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What stays on your device</h2>
+    <p>A few small things are kept on your phone rather than sent to us, and none of them is visible
+      to anyone else:</p>
+    <ul>
+      <li><strong>Your sign-in session</strong>, so you are not asked to sign in again every time
+        you open the app.</li>
+      <li><strong>Two small settings</strong> &mdash; whether device notifications are switched on,
+        and whether you have dismissed the prompt that offers them.</li>
+      <li><strong>Calendar entries you chose to add.</strong> If you add a shift to your
+        phone&rsquo;s calendar, that entry belongs to your calendar. The app stores only the
+        entry&rsquo;s ID, so it can remove the same entry later if you cancel.</li>
+    </ul>
+    <p>In the browser version of the app these live in your browser&rsquo;s local storage. The app
+      sets no advertising or tracking cookies anywhere. Signing out, deleting the app, or clearing
+      its data removes all of it.</p>
   </section>
 
   <section>
     <h2>Who can see your information</h2>
-    <p>
-      The app is organized around volunteer organizations. If you join one, the following is
-      visible to other members of that <strong>same</strong> organization — this is how a
-      coordinator finds people to staff a shift:
-    </p>
+    <p>The app is organized around volunteer organizations. If you join one, the following is
+      visible to other members of that <strong>same</strong> organization &mdash; this is how a
+      coordinator finds people to staff a shift:</p>
     <ul>
-      <li>Your name, phone number (if you added one), and profile photo.</li>
-      <li>Which shifts you have signed up for.</li>
-      <li>Which dish or supply item you have claimed, any note you added with it, and — if a
-        coordinator has assigned someone to pick it up — who that is.</li>
-      <li>Your approximate distance from a site, only if a coordinator looks up "who's nearby"
-        — never your street address unless you separately turned on address sharing.</li>
+      <li>Your name, phone number, and profile photo.</li>
+      <li>Which shifts you have signed up for, and any note you added about your vehicle.</li>
+      <li>Which dish or supply item you have claimed, any note you added with it, who else has
+        joined you to cook a dish together, and &mdash; if a coordinator has assigned someone to
+        pick it up &mdash; who that is.</li>
+      <li>Which full roles you have signalled interest in, and any run you have pledged to cover
+        yourself, along with any note on that pledge.</li>
+      <li>Your approximate distance from a site, rounded, only if a coordinator looks up
+        &ldquo;who&rsquo;s nearby&rdquo; &mdash; never your street address unless you turned on one of
+        the two address settings described below.</li>
+      <li>For a volunteer under 18, a coordinator of their organization is also shown a short status
+        on the roster: whether a guardian&rsquo;s consent is still outstanding, whether a guardian is
+        expected to accompany them, or that photographs of them are not to be uploaded.
+        <strong>A guardian&rsquo;s own name, email address and phone number are shown to no other
+        volunteer or coordinator, ever.</strong></li>
     </ul>
-    <p>
-      Every volunteer is shown by the name they entered, whatever their age, everywhere a name
-      appears to fellow volunteers — such as the roster for a shift. Names are only ever
-      visible to people in the same organization as you.
-    </p>
-    <p>
-      Members of a <strong>different</strong> organization on the same app never see your
-      information. Organizations do not share rosters with each other.
-    </p>
+    <p>Your profile record also carries your email address and the birth year worked out from the
+      age you entered. No screen in the app shows either of these to anyone but you, but the
+      database&rsquo;s access rules protect whole records rather than individual fields, so another
+      member of your organization who queried the data directly could retrieve them. We would rather
+      say so than imply a protection that is not there.</p>
+    <p>Every volunteer is shown by the name they entered, whatever their age, everywhere a name
+      appears to fellow volunteers &mdash; such as the roster for a shift. Names are only ever
+      visible to people in the same organization as you.</p>
+    <p>Members of a <strong>different</strong> organization on the same app never see your
+      information. Organizations do not share rosters with each other.</p>
   </section>
 
   <section>
-    <h2>Where your information is stored</h2>
-    <p>
-      The app is built on Supabase, which hosts the database and file storage this app uses.
-      Every table is protected by row-level security rules enforced by the database itself, not
-      just by the app's screens, so a request for data you are not entitled to is rejected at
-      the source. Supabase is the only third party that processes your data on the app's
-      behalf.
-    </p>
+    <h2>Your home address</h2>
+    <p>An address is the most sensitive thing this app holds, so it is kept in its own place, with
+      its own rules, and it is never shared as a side effect of anything else. Saving an address is
+      not consent to show it to anybody. Two separate settings can share it, each off until you turn
+      it on, each covering only what it says:</p>
+    <ul>
+      <li><strong>&ldquo;Let coordinators see the address itself&rdquo;</strong> (Profile &rarr;
+        Where you are). With it off &mdash; the default &mdash; a coordinator of your organization
+        can see only how far you are from a site, rounded, and never the address. With it on,
+        coordinators of your organization can also see the address itself. Other volunteers cannot,
+        either way.</li>
+      <li><strong>Sharing a pickup address for one dish you claimed.</strong> When you claim a dish
+        to cook at home and a coordinator assigns a driver to collect it, you can choose to show
+        that one driver your saved address so they can find you. It applies to that single claim and
+        to whoever is assigned to it at the time: if the claim is reassigned or the driver is
+        removed, their access ends immediately, with nothing for you to switch off. If you do not
+        turn it on, the driver gets your phone number and arranges the pickup with you instead.</li>
+    </ul>
+    <p>Turning either setting off, or clearing the address field entirely, takes effect at once.
+      Distances shown to a coordinator are rounded, which reduces but does not completely eliminate
+      what can be inferred about where you live &mdash; that is the honest trade for the feature
+      existing at all, and it is why the address itself stays behind a separate switch.</p>
+  </section>
+
+  <section>
+    <h2>When the app hands you to another app</h2>
+    <p>Some things the app offers are finished somewhere else, by an app you already have. Each of
+      these is something you tap, never something that happens on its own:</p>
+    <ul>
+      <li><strong>Directions.</strong> Tapping a route opens Apple Maps or Google Maps &mdash; your
+        choice &mdash; with the address being navigated to.</li>
+      <li><strong>Calling or texting.</strong> Tapping a phone number opens your own phone or
+        messages app with the number filled in. <strong>The app never sends a text or places a call
+        itself</strong>, never sends you marketing messages, and never sees what you write.</li>
+      <li><strong>Sharing a run.</strong> Tapping share opens your device&rsquo;s own share sheet;
+        you pick the app and the person, and the app only supplies the text and a link.</li>
+    </ul>
+    <p>Once you are in one of those apps, that app&rsquo;s own privacy policy applies and this one no
+      longer does. We have no control over them and receive nothing back from them.</p>
+  </section>
+
+  <section>
+    <h2>Other companies involved</h2>
+    <p>Four, and no others. None of them is an advertising network, an analytics service, or an AI
+      provider. Each is required to protect your information to at least the standard this policy
+      describes, may use it only to perform the service it provides to the app, and may not sell it
+      or use it for its own purposes.</p>
+    <ul>
+      <li><strong>Supabase</strong> hosts the database, the file storage, and the sign-in system
+        this app runs on. It processes everything described above on the app&rsquo;s behalf, and it
+        is the only company that holds your data at rest.</li>
+      <li><strong>Your phone&rsquo;s own geocoder</strong> (Apple on iPhone, Google on Android)
+        converts an address you save into coordinates. The address text is sent to that service by
+        your device at the moment you save it. If you never save an address, this never happens.</li>
+      <li><strong>OpenStreetMap&rsquo;s Nominatim</strong> search service is used only when a
+        coordinator looks up a kitchen or drop-off site by name while creating a run. It receives the
+        search text the coordinator typed and nothing else &mdash; never a volunteer&rsquo;s name,
+        address, or any other personal information.</li>
+      <li><strong>CARTO</strong> supplies the background map images on the Map tab. When you open
+        that tab, your device asks CARTO for the map squares it needs to draw the area you are
+        looking at, which tells CARTO which part of the map you are viewing. It is sent no name, no
+        account, and no home address &mdash; and if you never open the Map tab, it is never
+        contacted. The map software itself is built into the app rather than downloaded, so those
+        map images are the only thing fetched.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Where your information is stored, and how it is protected</h2>
+    <p>Everything is stored in the <strong>United States</strong>, in Supabase&rsquo;s Oregon region
+      (US-West-2). If you use the app from outside the United States, your information is sent to and
+      stored in the United States, where privacy law may differ from your own country&rsquo;s.</p>
+    <p>Every table is protected by row-level security rules enforced by the database itself, not just
+      by the app&rsquo;s screens, so a request for data you are not entitled to is rejected at the
+      source rather than merely hidden from view. All traffic between the app and Supabase is
+      encrypted in transit. Photos live in a private bucket and are only ever served through links
+      that expire after an hour.</p>
+    <p>While the app is open, it holds a live connection to Supabase so that changes in your
+      organization &mdash; a shift filling up, a delivery confirmed &mdash; reach your screen without
+      you pulling to refresh. That connection carries only the same organization data you are already
+      entitled to see.</p>
+  </section>
+
+  <section>
+    <h2>If something goes wrong</h2>
+    <p>No system is perfectly secure, and we would rather say that than imply otherwise. The
+      protections above are real and are enforced by the database rather than by good intentions, but
+      no one can promise that information sent over the internet is safe forever.</p>
+    <p>If we discover a breach that affects your information, we will email the people affected as
+      soon as we reasonably can, tell you plainly what happened and what to do about it, and notify
+      regulators where the law requires it. You will not learn about it from someone else first.</p>
   </section>
 
   <section>
     <h2>How long information is kept</h2>
     <ul>
-      <li><strong>Everything is kept for as long as your account exists.</strong> Your
-        profile, participation records, photos you uploaded, and your notification history stay
-        until you delete your account, which you can do at any time — see below.</li>
-      <li><strong>Links to photos expire, the photos do not.</strong> Every image is served
-        through a private link that stops working after an hour; the app generates a fresh one
-        each time you view the photo.</li>
+      <li><strong>Everything is kept for as long as your account exists.</strong> Your profile,
+        participation records, photos you uploaded, and your notification history stay until you
+        delete your account, which you can do at any time &mdash; see below.</li>
+      <li><strong>Links to photos expire, the photos do not.</strong> Every image is served through a
+        private link that stops working after an hour; the app generates a fresh one each time you
+        view the photo.</li>
+      <li><strong>Your notification feed shows recent items.</strong> Notifications you have already
+        read drop out of the feed after about 90 days; unread ones stay until you read them.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Turning things off, and taking consent back</h2>
+    <p>Nothing here requires you to contact anyone. Each of these takes effect immediately, from
+      inside the app or your device&rsquo;s own settings:</p>
+    <ul>
+      <li><strong>Your address.</strong> Profile &rarr; Where you are. Turn off &ldquo;Let
+        coordinators see the address itself,&rdquo; or clear the field to remove the address
+        altogether. Turn off the per-dish pickup sharing on the claim it belongs to.</li>
+      <li><strong>Device notifications.</strong> Profile &rarr; the notifications card, which turns
+        them back off as well as on.</li>
+      <li><strong>Calendar, camera, photo library, and location permissions.</strong> Your
+        device&rsquo;s Settings app, under Community Meals. The app keeps working with any of them
+        refused &mdash; an address can be typed without location access, and a shift can be worked
+        without a calendar entry. Nothing is withheld from you for saying no.</li>
+      <li><strong>Your photo, name, or phone number.</strong> Editable in Profile at any time. A
+        phone number is required for as long as you hold an account; if you no longer want it on
+        file, deleting your account removes it.</li>
+      <li><strong>Everything at once.</strong> Delete your account, below. That is the complete
+        withdrawal of consent, and it needs no one&rsquo;s approval.</li>
     </ul>
   </section>
 
   <section>
     <h2>Deleting your account</h2>
-    <p>
-      You can permanently delete your account from inside the app at any time — Profile →
-      Danger zone → Delete my account. This immediately and permanently removes your profile,
-      home address, notifications, saved photo, and any upcoming (not yet
-      completed) shift sign-ups. There is no recovery period and no way to undo it.
-    </p>
-    <p>
-      Two categories of information intentionally survive, with your name removed from them,
-      so that an organization's operating history stays accurate for everyone else who relied
-      on it: photos you contributed to a completed shift (now unattributed), and the record
-      that a shift was delivered and by whom it was confirmed (also unattributed if that was
-      you). Neither identifies you once your account is deleted.
-    </p>
+    <p>You can permanently delete your account from inside the app at any time &mdash; Profile
+      &rarr; Danger zone &rarr; Delete my account. This immediately and permanently removes your
+      profile, phone number, home address and its sharing settings, your organization membership,
+      your notifications, your saved photo, every shift sign-up you hold, every dish and supply
+      claim, your place on any dish you joined to cook with someone else, every interest signal and
+      backstop pledge, and the reports and blocks you created. There is no recovery period and no way
+      to undo it.</p>
+    <p>Two categories of information intentionally survive, with your name removed from them, so that
+      an organization&rsquo;s operating history stays accurate for everyone else who relied on it:
+      photos you contributed to a completed shift (now unattributed), and the record that a shift was
+      delivered and by whom it was confirmed (also unattributed if that was you). If you were a
+      coordinator, the runs you scheduled also remain, no longer attributed to you. Neither
+      identifies you once your account is deleted.</p>
   </section>
 
   <section>
-    <h2>Children</h2>
-    <p>
-      The app requires every volunteer to be at least 13 years old and does not knowingly
-      collect information from anyone younger. Volunteers under 18 take part on exactly the
-      same terms as everyone else, and are shown by name to the other people in their
-      organization in the same way, as described above.
-    </p>
+    <h2>If the app changes hands or shuts down</h2>
+    <p>This app is not a data business, and your information is not an asset it would ever be sold
+      for. Nobody will buy Community Meals to get a list of volunteers.</p>
+    <p>If the app is one day handed to someone else to run &mdash; most likely one of the
+      organizations already using it &mdash; your information would move with it, this policy would
+      continue to apply until you were told otherwise, and you would be emailed before the change
+      with enough notice to delete your account first if you would rather not continue. If the app
+      shuts down instead, accounts and their contents are deleted rather than sold, transferred, or
+      left sitting on a server.</p>
+  </section>
+
+  <section>
+    <h2>Your rights, and how to use them</h2>
+    <p>Depending on where you live, privacy law may give you rights over your information. We honour
+      these for everyone who asks, wherever they live, rather than checking your state first:</p>
+    <ul>
+      <li><strong>Know and see it.</strong> Most of it is on your own screens already. For a full
+        copy, including anything the app does not display, email us and we will send it in a portable
+        format.</li>
+      <li><strong>Correct it.</strong> Your name, phone number, photo, and address are editable in
+        Profile at any time. Email us for anything else.</li>
+      <li><strong>Delete it.</strong> Profile &rarr; Danger zone &rarr; Delete my account, as
+        described above. You do not need to ask us.</li>
+      <li><strong>Opt out of sale, targeted advertising, and profiling.</strong> There is nothing to
+        opt out of: the app does none of these, so a browser or device opt-out preference signal has
+        nothing here to act on.</li>
+    </ul>
+    <p>Email <strong><a href="mailto:irehan29@icloud.com">irehan29@icloud.com</a></strong> to make a
+      request. We will respond within 45 days. If we refuse a request, our answer will say why, and
+      you may appeal it by replying within 60 days &mdash; an appeal gets a written decision within
+      60 days of receiving it. If we deny your appeal you may complain to your state attorney
+      general. We will never charge you for a request, and never treat you differently for making
+      one.</p>
+  </section>
+
+  <section>
+    <h2>Age, and volunteers under 18</h2>
+    <p>The app requires every volunteer to be at least 13 years old, asked during sign-up, and does
+      not knowingly collect information from anyone younger. If we learn that an account belongs to
+      someone under 13, we delete it. A parent or guardian who believes their child under 13 has an
+      account can email us and we will remove it.</p>
+    <p>A volunteer aged 13 to 17 needs a parent or guardian to agree before they can take part. That
+      happens in the app, during their setup, with the adult present: the app asks for the
+      guardian&rsquo;s name, email address and phone number, and records what they agreed to, when,
+      and which version of this policy and of the Community Guidelines was in force at the time.</p>
+    <p>The guardian answers five things separately, rather than agreeing to one combined statement.
+      Two are required, because without them there is nothing to take part in: that their child may
+      have an account and volunteer, and that their child&rsquo;s full name is visible to other
+      volunteers in their organization. The other three are genuine choices, and saying no to any of
+      them does not stop the young person volunteering: whether photos taken at events that may
+      include their child can be seen by others in the organization, whether a home address may be
+      saved to show them the closest runs first, and whether their child may travel to a site without
+      them.</p>
+    <ul>
+      <li>Saying no to photos means that volunteer cannot upload any. This applies to their own
+        uploads; the app does not attempt to identify anyone in photographs taken by other
+        people.</li>
+      <li>Saying no to a home address means no address is saved for them, and the step asking for one
+        is skipped.</li>
+      <li>Saying no to travelling alone means the coordinator running a shift is shown that a
+        guardian is expected to come too. This is information for the coordinator, not something the
+        app can check &mdash; the app has no way of knowing who actually arrives.</li>
+    </ul>
+    <p>Until a guardian has agreed, the young volunteer can sign in, join an organization and look at
+      what it is doing, but cannot sign up for a shift or upload a photo. The app says so on their
+      screen rather than letting them try and be refused.</p>
+    <p>If this policy or the Community Guidelines are materially rewritten, consent given against the
+      older wording stops counting and the guardian is asked again, rather than the old agreement
+      being carried forward onto new terms. Consent also stops applying when the volunteer turns 18,
+      at which point they answer for themselves.</p>
+    <p>A guardian can ask at any time to see what they agreed to, withdraw any single item, withdraw
+      altogether, or have the account deleted, by emailing
+      <strong><a href="mailto:irehan29@icloud.com">irehan29@icloud.com</a></strong>. There is a page
+      written for them at <strong>For parents and guardians</strong>, reachable without an
+      account.</p>
+    <p>No volunteer&rsquo;s information, minor or adult, is ever used for advertising, profiling, or
+      any purpose beyond the ones listed in this policy. Volunteering with an organization usually
+      involves that organization&rsquo;s own paperwork for minors, which is between you and them
+      &mdash; this policy covers only the app.</p>
   </section>
 
   <section>
     <h2>Changes to this policy</h2>
-    <p>
-      If this policy changes in a way that affects what is collected or who can see it, the
-      "Last updated" date at the top of this page will change accordingly.
-    </p>
+    <p>If this policy changes in a way that affects what is collected or who can see it, the
+      &ldquo;Last updated&rdquo; date at the top of this page will change accordingly, and we will
+      tell you in the app before the change takes effect rather than expecting you to notice.</p>
   </section>
 
   <section>
     <h2>Contact</h2>
-    <p>Questions about this policy or your data: <a href="mailto:irehan29@icloud.com">irehan29@icloud.com</a>.</p>
+    <p>Questions about this policy, requests about your data, or anything above that is not clear:
+      <strong><a href="mailto:irehan29@icloud.com">irehan29@icloud.com</a></strong>. A real person
+      reads it.</p>
   </section>
 </main>
 
-<footer>Community Meals — a multi-organization food-relief volunteering platform.</footer>
+<footer>Community Meals &mdash; a multi-organization food-relief volunteering platform.</footer>
 </body>
 </html>
