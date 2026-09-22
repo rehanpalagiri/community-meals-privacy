@@ -95,7 +95,7 @@
 </header>
 
 <main>
-  <p class="updated">Last updated September 20, 2026</p>
+  <p class="updated">Last updated September 21, 2026</p>
 
   <div class="intro">
     <p style="margin:0">
@@ -357,21 +357,27 @@
 
   <section>
     <h2>10. Other companies involved</h2>
-    <p>Four, and no others. None of them is an advertising network, an analytics service, or an AI
+    <p>Five, and no others. None of them is an advertising network, an analytics service, or an AI
       provider. Each is required to protect your information to at least the standard this policy
       describes, may use it only to perform the service it provides to the app, and may not sell it
       or use it for its own purposes.</p>
     <ul>
       <li><strong>Supabase</strong> hosts the database, the file storage, and the sign-in system
         this app runs on. It processes everything described above on the app&rsquo;s behalf, and it
-        is the only company that holds your data at rest.</li>
+        is where your information lives day to day.</li>
+      <li><strong>Cloudflare</strong> keeps encrypted backup copies of the app&rsquo;s information
+        &mdash; the database and the photos &mdash; so that nothing is lost for good if something goes
+        wrong at Supabase. Each copy is encrypted before it is sent, with a key Cloudflare does not
+        hold, so Cloudflare stores the copies but cannot read them. Nothing is ever shown to anyone
+        from these copies; they exist only to recover the app if its main copy is lost.</li>
       <li><strong>Your phone&rsquo;s own geocoder</strong> (Apple on iPhone, Google on Android)
         converts an address you save into coordinates. The address text is sent to that service by
         your device at the moment you save it. If you never save an address, this never happens.</li>
-      <li><strong>OpenStreetMap&rsquo;s Nominatim</strong> search service is used only when a
-        coordinator looks up a kitchen or drop-off site by name while creating a run. It receives the
-        search text the coordinator typed and nothing else &mdash; never a volunteer&rsquo;s name,
-        address, or any other personal information.</li>
+      <li><strong>OpenStreetMap&rsquo;s Nominatim</strong> search service is used only for an
+        organization&rsquo;s kitchens and drop-off sites: when a coordinator looks one up by name, and
+        to confirm that a site address a coordinator typed is a real place before it is saved. It
+        receives that search text or site address and nothing else &mdash; never a volunteer&rsquo;s
+        name, home address, or any other personal information.</li>
       <li><strong>CARTO</strong> supplies the background map images on the Map tab. When you open
         that tab, your device asks CARTO for the map squares it needs to draw the area you are
         looking at, which tells CARTO which part of the map you are viewing. It is sent no name, no
@@ -383,8 +389,9 @@
 
   <section>
     <h2>11. Where your information is stored, and how it is protected</h2>
-    <p>Everything is stored in the <strong>United States</strong>, in Supabase&rsquo;s Oregon region
-      (US-West-2). If you use the app from outside the United States, your information is sent to and
+    <p>Everything is stored in the <strong>United States</strong>: the app&rsquo;s information in
+      Supabase&rsquo;s Oregon region (US-West-2), and its encrypted backups in Cloudflare&rsquo;s
+      United States jurisdiction, which requires them to be stored and processed inside the US. If you use the app from outside the United States, your information is sent to and
       stored in the United States, where privacy law may differ from your own country&rsquo;s.</p>
     <p>Every table is protected by row-level security rules enforced by the database itself, not just
       by the app&rsquo;s screens, so a request for data you are not entitled to is rejected at the
@@ -416,6 +423,10 @@
       <li><strong>Links to photos expire, the photos do not.</strong> Every image is served through a
         private link that stops working after an hour; the app generates a fresh one each time you
         view the photo.</li>
+      <li><strong>Backups are deleted after 30 days.</strong> A new encrypted backup is made each day,
+        and each one is deleted automatically 30 days after it was made. Anything removed from the app
+        &mdash; including a deleted account &mdash; is therefore gone from the backups within 30
+        days.</li>
       <li><strong>Your notification feed shows recent items.</strong> Notifications you have already
         read drop out of the feed after about 90 days; unread ones stay until you read them.</li>
       <li><strong>A record a coordinator typed in is kept by the organization.</strong> Because it
@@ -460,6 +471,9 @@
       claim, your place on any dish you joined to cook with someone else, every interest signal and
       backstop pledge, any attendance a coordinator recorded about you, and the reports and blocks
       you created. There is no recovery period and no way to undo it.</p>
+    <p>The encrypted backups described in section 10 are not edited when an account is deleted.
+      Instead, every backup is deleted 30 days after it was made, so within 30 days of deleting your
+      account nothing of it remains in them either.</p>
     <p>Two categories of information intentionally survive, with your name removed from them, so that
       an organization&rsquo;s operating history stays accurate for everyone else who relied on it:
       photos you contributed to a completed shift (now unattributed), and the record that a shift was
