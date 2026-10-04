@@ -1,6 +1,6 @@
-# FoodBridge — public privacy policy
+# Uplinq — public privacy policy
 
-The published privacy policy for the **FoodBridge** volunteer app, served by GitHub Pages at:
+The published privacy policy for the **Uplinq** volunteer app, served by GitHub Pages at:
 
 **https://rehanpalagiri.github.io/community-meals-privacy/**
 
