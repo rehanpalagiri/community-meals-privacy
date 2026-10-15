@@ -1,6 +1,6 @@
-# NutriLink — public privacy policy
+# NutriLinked — public privacy policy
 
-The published privacy policy for the **NutriLink** volunteer app, served by GitHub Pages at:
+The published privacy policy for the **NutriLinked** volunteer app, served by GitHub Pages at:
 
 **https://rehanpalagiri.github.io/community-meals-privacy/**
 
