@@ -95,7 +95,7 @@
 </header>
 
 <main>
-  <p class="updated">Last updated October 12, 2026</p>
+  <p class="updated">Last updated October 14, 2026</p>
 
   <div class="intro">
     <p style="margin:0">
@@ -151,7 +151,11 @@
     <h2>3. Information the app collects</h2>
     <ul>
       <li><strong>Account information.</strong> Email address and password, handled by our backend
-        provider (Supabase) &mdash; the app itself never stores your password.</li>
+        provider (Supabase) &mdash; the app itself never stores your password. The app emails that
+        address a one-time code in three situations only: when you create an account, when you add
+        an email to a guest account, and when you ask to reset your password. Typing the code proves
+        the address is yours. Nothing else is ever sent to it from the app &mdash; no newsletters
+        and no marketing.</li>
       <li><strong>Profile information.</strong> Your first and last name, a phone number, and your
         age (kept as a birth year, and used only to confirm you are at least 13 and whether a parent or guardian needs to agree first). A profile photo is
         optional. <strong>A phone number is required</strong> &mdash; a coordinator staffing a run,
@@ -368,7 +372,7 @@
 
   <section>
     <h2>10. Other companies involved</h2>
-    <p>Five, and no others. None of them is an advertising network, an analytics service, or an AI
+    <p>Six, and no others. None of them is an advertising network, an analytics service, or an AI
       provider. Each is required to protect your information to at least the standard this policy
       describes, may use it only to perform the service it provides to the app, and may not sell it
       or use it for its own purposes.</p>
@@ -376,6 +380,10 @@
       <li><strong>Supabase</strong> hosts the database, the file storage, and the sign-in system
         this app runs on. It processes everything described above on the app&rsquo;s behalf, and it
         is where your information lives day to day.</li>
+      <li><strong>Resend</strong> delivers the app&rsquo;s account emails &mdash; the one-time codes
+        for confirming an email address and for resetting a password. It is given the address and the
+        email being sent to it, and nothing else: never your password, your profile, or anything about
+        your volunteering.</li>
       <li><strong>Cloudflare</strong> keeps encrypted backup copies of the app&rsquo;s information
         &mdash; the database and the photos &mdash; so that nothing is lost for good if something goes
         wrong at Supabase. Each copy is encrypted before it is sent, with a key Cloudflare does not
@@ -402,7 +410,8 @@
     <h2>11. Where your information is stored, and how it is protected</h2>
     <p>Everything is stored in the <strong>United States</strong>: the app&rsquo;s information in
       Supabase&rsquo;s Oregon region (US-West-2), and its encrypted backups in Cloudflare&rsquo;s
-      United States jurisdiction, which requires them to be stored and processed inside the US. If you use the app from outside the United States, your information is sent to and
+      United States jurisdiction, which requires them to be stored and processed inside the US.
+      Account emails are sent through Resend&rsquo;s United States region. If you use the app from outside the United States, your information is sent to and
       stored in the United States, where privacy law may differ from your own country&rsquo;s.</p>
     <p>Every table is protected by row-level security rules enforced by the database itself, not just
       by the app&rsquo;s screens, so a request for data you are not entitled to is rejected at the
@@ -438,6 +447,10 @@
         and each one is deleted automatically 30 days after it was made. Anything removed from the app
         &mdash; including a deleted account &mdash; is therefore gone from the backups within 30
         days.</li>
+      <li><strong>Codes stop working after an hour; Resend&rsquo;s copy is deleted after 30
+        days.</strong> Each emailed code can be used once, within an hour. Resend keeps a copy of
+        every email it delivers, and the record of delivering it, for 30 days so that a missing email
+        can be traced, and then deletes them.</li>
       <li><strong>Your notification feed shows recent items.</strong> Notifications you have already
         read drop out of the feed after about 90 days; unread ones stay until you read them.</li>
       <li><strong>A record a coordinator typed in is kept by the organization.</strong> Because it
@@ -484,7 +497,9 @@
       &ldquo;still coming?&rdquo;, and the reports and blocks you created. There is no recovery period and no way to undo it.</p>
     <p>The encrypted backups described in section 10 are not edited when an account is deleted.
       Instead, every backup is deleted 30 days after it was made, so within 30 days of deleting your
-      account nothing of it remains in them either.</p>
+      account nothing of it remains in them either. In the same way, any account email sent to you
+      in the 30 days before you delete your account stays at Resend until its own 30 days are
+      up.</p>
     <p>Two categories of information intentionally survive, with your name removed from them, so that
       an organization&rsquo;s operating history stays accurate for everyone else who relied on it:
       photos you contributed to a completed shift (now unattributed), and the record that a shift was
